@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Rental System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Car Rental System</h1>
+    <nav>
+      <button onclick="showSection('customers')">Customers</button>
+      <button onclick="showSection('cars')">Cars</button>
+      <button onclick="showSection('rentals')">Rentals</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Customers Section -->
+    <section id="customers" class="hidden">
+      <h2>Customers</h2>
+      <form id="customerForm">
+        <input type="text" id="customerName" placeholder="Full Name" required>
+        <input type="email" id="customerEmail" placeholder="Email" required>
+        <input type="text" id="customerPhone" placeholder="Phone" required>
+        <input type="text" id="customerAddress" placeholder="Address" required>
+        <button type="submit">Add Customer</button>
+      </form>
+      <table id="customerTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Address</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <!-- Cars Section -->
+    <section id="cars" class="hidden">
+      <h2>Cars</h2>
+      <form id="carForm">
+        <input type="text" id="carModel" placeholder="Model" required>
+        <input type="text" id="carBrand" placeholder="Brand" required>
+        <input type="number" id="carRate" placeholder="Daily Rate" required>
+        <input type="text" id="carPlate" placeholder="Plate Number" required>
+        <button type="submit">Add Car</button>
+      </form>
+      <table id="carTable">
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Brand</th>
+            <th>Daily Rate</th>
+            <th>Plate Number</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <!-- Rentals Section -->
+    <section id="rentals" class="hidden">
+      <h2>Rentals</h2>
+      <form id="rentalForm">
+        <input type="text" id="rentalCustomer" placeholder="Customer Name" required>
+        <input type="text" id="rentalCar" placeholder="Car Plate Number" required>
+        <input type="date" id="rentalStart" required>
+        <input type="date" id="rentalEnd" required>
+        <button type="submit">Add Rental</button>
+      </form>
+      <table id="rentalTable">
+        <thead>
+          <tr>
+            <th>Customer</th>
+            <th>Car</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
